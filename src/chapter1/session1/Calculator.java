@@ -53,7 +53,7 @@ public class Calculator implements Runnable {
         }
         try (FileWriter file = new FileWriter("data.txt"); PrintWriter pw = new PrintWriter(file)) {
             for (int i =0; i < 10; i++) {
-                pw.println("Main Status of Thread " + i + " : " + threads[i].getState());
+                pw.println("UnsafeMain Status of Thread " + i + " : " + threads[i].getState());
                 status[i]= threads[i].getState();
             }
 
@@ -84,10 +84,10 @@ public class Calculator implements Runnable {
 
     private static void writeThreadInfo(PrintWriter pw, Thread thread, Thread.State state) {
         pw.println("*****************************");
-        pw.printf("Main : Id %d - %s\n", thread.getId(), thread.getName());
-        pw.printf("Main : Priority %d\n", thread.getPriority());
-        pw.printf("Main : Old State %s\n", state);
-        pw.printf("Main : New State %s\n", thread.getState());
+        pw.printf("UnsafeMain : Id %d - %s\n", thread.getId(), thread.getName());
+        pw.printf("UnsafeMain : Priority %d\n", thread.getPriority());
+        pw.printf("UnsafeMain : Old State %s\n", state);
+        pw.printf("UnsafeMain : New State %s\n", thread.getState());
         pw.println("*****************************");
     }
 }

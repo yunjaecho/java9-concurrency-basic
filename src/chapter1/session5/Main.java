@@ -21,7 +21,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("Main: Configuration has been loaded : " + new Date());
+        System.out.println("UnsafeMain: Configuration has been loaded : " + new Date());
 
     }
 }
