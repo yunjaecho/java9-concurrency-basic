@@ -15,6 +15,7 @@ public class Searcher implements Runnable {
 
     private final CyclicBarrier barrier;
 
+
     public Searcher(int firstRow, int lastRow, MatrixMock mock, Results results, int number, CyclicBarrier barrier) {
         this.firstRow = firstRow;
         this.lastRow = lastRow;
